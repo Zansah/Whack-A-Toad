@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Tunnel Game</title>
+    <style>
+        body {
+            background-image: url('Photo Gray Background.jpg');
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            width: 100%;
+            height: 100%;
+            margin: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+
+        html {
+            height: 100%; 
+        }
+
+        .Main-box {
+            position: relative; 
+            height: 600px; 
+            width: 600px; 
+            background-color: aquamarine;
+            border-radius: 10px;
+            overflow: hidden; 
+        }
+
+        .soil-background {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .tunnel-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr); 
+            gap: 10px; 
+            z-index: 2;
+        }
+
+        .green-tunnel {
+            position: relative; 
+            width: 100%; 
+            height: 100%;
+
+        }
+
+        .green-tunnel img {
+            width: 100%; 
+            height: auto; 
+        }
+
+        .toad, .plant {
+            position: absolute;
+            width: 50px; 
+            height: 50px; 
+            background-size: cover;
+            cursor: pointer; 
+            display: none;
+        }
+
+        .toad {
+            background-image: url('Mario-Toad.png'); 
+            top: 10%;
+            left: 10%;
+        }
+
+        .plant {
+            background-image: url('Mario-plant.png');
+            top: 60%;
+            left: 60%;
+        }
+
+        .total-points {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Main-box">
+        <img class="soil-background" src="Photo Soil.jpg" alt="">
+        <div class="tunnel-container">
+            <div class="green-tunnel">
+                <img src="Mario-tunnel.png" alt="Green Tunnel" style="margin-top: 35px;">
+                <div class="toad"></div>
+                <div class="plant"></div>
+            </div>
+            <div class="green-tunnel">
+                <img src="Mario-tunnel.png" alt="Green Tunnel" style="margin-top: 35px;">
+                <div class="toad"></div>
+                <div class="plant"></div>
+            </div>
+            <div class="green-tunnel">
+                <img src="Mario-tunnel.png" alt="Green Tunnel" style="margin-top: 35px;">
+                <div class="toad"></div>
+                <div class="plant"></div>
+            </div>
+            <div class="green-tunnel">
+                <img src="Mario-tunnel.png" alt="Green Tunnel">
+                <div class="toad"></div>
+                <div class="plant"></div>
+            </div>
+            <div class="green-tunnel">
+                <img src="Mario-tunnel.png" alt="Green Tunnel">
+                <div class="toad"></div>
+                <div class="plant"></div>
+            </div>
+            <div class="green-tunnel">
+                <img src="Mario-tunnel.png" alt="Green Tunnel">
+                <div class="toad"></div>
+                <div class="plant"></div>
+            </div>
+            <div class="green-tunnel">
+                <img src="Mario-tunnel.png" alt="Green Tunnel">
+                <div class="toad"></div>
+                <div class="plant"></div>
+            </div>
+            <div class="green-tunnel">
+                <img src="Mario-tunnel.png" alt="Green Tunnel">
+                <div class="toad"></div>
+                <div class="plant"></div>
+            </div>
+            <div class="green-tunnel">
+                <img src="Mario-tunnel.png" alt="Green Tunnel">
+                <div class="toad"></div>
+                <div class="plant"></div>
+            </div>
+        </div>
+        <div class="total-points">Points: 0</div>
+    </div> 
+
+    <script src="script.js"></script>
+</body>
+</html>
